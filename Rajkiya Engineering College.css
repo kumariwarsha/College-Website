@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Century Gothic",sans-serif;
+} 
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.navlist{
+    width: 100%;
+    padding: 5px 10vw;
+    position: fixed;
+    background: rgb(184, 173, 230);
+    z-index: 10;
+    
+}
+.navlist ul{
+    display: flex;
+    list-style: none;
+} 
+ .navlist ul li:first-child{
+    flex: 1;
+}
+.navlist ul h4{
+    font-family: serif;
+    color: #fff;
+} 
+.navlist ul a{
+    margin-left: 20px;
+    font-size: 12px;
+}
+.navlist ul a:hover{
+    color:#f80;
+}
+
+/* CONTAINER */
+.container{
+    width: 100%;
+    height: 80vh;
+    padding-top: 30vh;
+    background-image: linear-gradient(#000000c3,#000000c3), url(https://www.myamcat.com/blog/wp-content/uploads/2017/03/engineering1-1.jpg);
+    /* background-image: url(https://tse1.mm.bing.net/th?id=OIP.RCSTdUYLju4FFkKTWzY5-QAAAA&pid=Api&P=0); */
+    text-align: center;
+    color: whitesmoke;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    background-size: cover;
+    background-position: center;
+}
+.container h1{
+    font-family: serif;
+    margin-bottom: 20px;
+    word-spacing: 3px;
+} 
+.container p{
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+.container button{
+    padding: 10px;
+    background: none;
+    border: 1px solid #f80;
+}
+.container button:hover{
+    background: #f80;
+}
+.flex{
+    display:flex;
+    direction:flex;
+}
+
+.margin{
+    margin-left:836px;
+}
+/* CONTENT BOX */
+.content-box{
+    width: 80%;
+    margin: auto;
+}
+.content-box>h2{
+    text-align: center;
+    color: #f80;
+    margin: 20px;
+}
+.content-box>h2::before, .content-box>h2::after{
+    content: "--------";
+    letter-spacing: -5px;
+    margin: 0 10px;
+}
+.content-box .row{
+    display: flex;
+    justify-content: space-between;
+}
+.content-box .column{
+    width: 32%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+.content-box img{
+    width: 100%;
+    height: 100%;
+}
+.content-box .column a:last-child{
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 100;
+    left: 0;
+    bottom: 0;
+    background: #ff8800c3;
+    text-align: center;
+    line-height: 20vw;
+    font-size: 3vw;
+}
+.content-box .column:hover a:last-child{
+    height: 100%;
+    top: 0;
+}
+/* FOTTER */
+footer{
+    margin-top: 40px;
+    background: #ccc;
+}
+footer ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+footer ul li{
+    margin: 10px;
+}
+
+@media (max-width: 600px){
+    .content-box .row{
+        flex-direction: column;
+    }
+    .content-box .column{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .content-box .column a:last-child{
+        line-height: 80vw;
+        font-size: 6vw;
+    }
+}
